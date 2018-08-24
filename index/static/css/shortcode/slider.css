@@ -1,0 +1,168 @@
+﻿/* ====================================
+	Template: Filmudio
+======================================== */
+
+.slider-area {
+  display: block;
+  position: relative;
+}
+.slide-table {
+  display: table;
+  height: 100%;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.slide-content {
+  padding-left: 150px;
+}
+.slide-content h4 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  animation-delay: 1.2s;
+}
+.slide-content h2 {
+  animation-delay: 1.2s;
+  color: #fff;
+  font-size: 60px;
+  margin: 0 0 6px;
+}
+.slide-content h1 {
+  color: #fff;
+  font-size: 60px;
+  margin: 0 0 60px;
+  font-weight:400;
+  animation-delay: 1.2s;
+}
+.slide-content h2  span,.slide-content h1  span{color:#e2a750;}
+.slide-btn a {
+  animation-delay: 1.6s;
+  background: #e2a750 none repeat scroll 0 0;
+  box-shadow: 0 0 1px transparent;
+  color: #fff;
+  display: inline-block;
+  font-family: roboto;
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  transform: perspective(1px) translateZ(0px);
+  transform-origin: 0 100% 0;
+  transition: all 0.3s ease 0s;
+  vertical-align: middle;
+  width: 145px;
+  backface-visibility: hidden;
+  position: relative;
+  overflow: hidden;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.3s, 0.3s;
+  transition-property: border-color, color;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.slide-btn a::before {
+  background: #c8954a none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate3d(0, 0, 1, -45deg) translate3d(0px, -3em, 0px);
+  transform-origin: 0 100% 0;
+  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, background-color 0.3s ease 0s;
+  width: 150%;
+  z-index: -1;
+}
+.slide-btn a:hover::before {
+  background-color: #c8954a;
+  opacity: 1;
+  transform: rotate3d(0, 0, 1, 0deg);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+/* Slider Dot Css */
+.slider-area .owl-theme .owl-nav.disabled + .owl-dots {
+  left: auto;
+  position: absolute;
+  right: 130px;
+  top: 62%;
+}
+.slider-area .owl-theme .owl-dots .owl-dot span {
+  backface-visibility: visible;
+  background: rgba(0, 0, 0, 0) url("../../img/icon/dot.png") no-repeat scroll 0 0;
+  border-radius: 0;
+  display: block;
+  height: 30px;
+  margin: 0 15px 0 0;
+  transition: opacity 0.2s ease 0s;
+  width: 30px;
+}
+.slider-area .owl-theme .owl-dots .owl-dot.active span{
+  background: rgba(0, 0, 0, 0) url("../../img/icon/dot-active.png") no-repeat scroll 0 0;
+  width:35px;
+  height:41px;
+}
+.slider-area .owl-theme .owl-nav.disabled + .owl-dots::after {
+  background: #4b5459 none repeat scroll 0 0;
+  bottom: 14px;
+  content: "";
+  height: 1px;
+  left: -17px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 111px;
+}
+.slider-social-area {
+  padding-right: 150px;
+  position: absolute;
+  right: 0;
+  top: 132%;
+}
+.slider-social-area ul li {
+  display: inline-block;
+  padding-right: 50px;
+}
+.slider-social-area ul li:last-child{padding:0;}
+.slider-social-area ul li a {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  transition:.4s;
+}
+.slider-social-area ul li a:hover {
+  color: #e2a750;
+}
+/* Slider Animation Css */
+.slide-content *{
+  -webkit-animation-duration: 1.3s;
+	animation-duration: 1.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both; }
+.active .slide-content h1 {
+  -webkit-animation-name: rotateInUpLeft;
+  animation-name: rotateInUpLeft; 
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.active .slide-content h4{
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.active .slide-content h2{
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.active .slide-content .slide-btn a {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+-webkit-animation-duration: 3s;
+  animation-duration: 3s;  
+}

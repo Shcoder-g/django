@@ -1,0 +1,185 @@
+/* =======================================
+	
+	Template: Flim Studio
+
+========================================== */
+.home .logo-img {
+  padding-left: 135px;
+}
+.logo-img {
+  margin-top: 20px;
+}
+.home .main-menu {
+  padding-right: 115px;
+}
+.header-menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.mobile-menu-area {
+  display: none;
+}
+.main-menu ul {
+  position: relative;
+}
+.main-menu nav ul li {
+  display: inline-block;
+}
+.main-menu nav ul li a {
+  color: #fff;
+  display: block;
+  font-family: roboto;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 28px 25px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+}
+.main-menu nav > ul > li.active > a,.main-menu nav > ul > li:hover > a{color:#e2a750;}
+.main-menu nav ul li > ul {
+  background: #000 none repeat scroll 0 0;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  opacity: 0;
+  padding: 0 20px;
+  position: absolute;
+  text-align: left;
+  top: 180px;
+  transform-origin: 0 0 0;
+  transition: all 0.5s ease 0s;
+  visibility: hidden;
+  width: 210px;
+  z-index: -9999;
+}
+.main-menu ul li ul li {
+  display: block;
+  overflow: hidden;
+}
+.main-menu ul li ul > li > a {
+  border-bottom: 1px dashed #fff;
+  color: #fff!important;
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  overflow: hidden;
+  padding: 20px 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.main-menu ul li ul > li:last-child > a {
+  border: medium none;
+}
+.main-menu ul li ul > li > a:hover{color:#e2a750!important;margin-left:4px;}
+.main-menu ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+  top:73px;
+}
+
+ /*Sticky Menu*/
+.sticky {
+  animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  background: #000 none repeat scroll 0 0;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+.sticky .main-menu nav ul li a{padding: 25px 20px;}
+.sticky .logo-img {margin-top: 20px;}
+.sticky .main-menu ul li:hover ul {
+  top: 67px;
+}
+.sticky .main-menu ul li ul > li > a{padding:15px 0px;}
+
+/* Search Form */
+.search-open {
+  color: #6f6f6f;
+  font-size: 18px;
+  transition: all 0.3s ease 0s;
+}
+.search-open :hover{color:#ffb606;}
+.search-inside {
+  background: rgba(0, 0, 0, 0.84) none repeat scroll 0 0;
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+.search-inside .search-close {
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  z-index: 500;
+}
+.search-inside .search-close:hover{color:#ffb606}
+.search-inside .search-overlay {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.search-inside .position-center-center {
+  padding: 0 20px;
+  width: 60%;
+}
+.position-center-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.search-inside .search {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.search-inside .search input {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: #fff none repeat scroll 0 0;
+  border-color: -moz-use-text-color -moz-use-text-color rgba(0, 0, 0, 0.5);
+  border-image: none;
+  border-style: none none solid;
+  border-width: medium medium 1px;
+  color: #555;
+  font-size: 16px;
+  height: 60px;
+  padding: 0 20px;
+  text-align: left;
+  transition: all 0.4s ease-in-out 0s;
+  width: 100%;
+  font-weight: 500;
+}
+.search-inside .search button {
+  background: #ffb606 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  float: right;
+  font-size: 21px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.4s ease-in-out 0s;
+  width: 59px;
+  z-index: 1;
+  cursor:pointer;
+}
+.search-inside .search button:hover{color:#555;background:#e2a750}
