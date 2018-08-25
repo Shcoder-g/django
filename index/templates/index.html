@@ -153,6 +153,9 @@
 			<!-- Header Area End -->
 			<!-- Page Content Start -->
 			<div class="page-content">
+				{% for event in hotEvent %}
+					<img src="{{event.smallImg.url}}">
+				{% endfor %}
 				<!-- All Service Area Start -->
 				<!-- Latest Tailer Area Strat -->
 				<section class="tailer-area ptb-130 gray-bg indicator-style">
